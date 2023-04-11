@@ -5,12 +5,8 @@
 GoGaurdian can't kick you off this site unless you permit it too.
 </body>
 <script>
-let formChanged = false;
-myForm.addEventListener('change', () => formChanged = true);
 window.addEventListener('beforeunload', (event) => {
-  if (formChanged) {
-    event.returnValue = 'You have unfinished changes!';
-  }
+  event.returnValue = `Are you sure you want to leave?`;
 });
 </script>
 </html>
